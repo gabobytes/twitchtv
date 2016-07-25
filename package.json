@@ -10,7 +10,8 @@
     "twitchtv",
     "angularjs",
     "frontend",
-    "javascript"
+    "javascript",
+    "api"
   ],
   "author": "Gabriel Melo",
   "license": "MIT",

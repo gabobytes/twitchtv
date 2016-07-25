@@ -1,4 +1,4 @@
-# TwitchTV Api - AngularJS
+# TwitchTV Api - AngularJS V1.0.1
 Frontend project working with Api from TwtitchTV, Freecodecamp frontend certification.
 
 Instructions:

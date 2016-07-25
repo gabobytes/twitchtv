@@ -1,4 +1,4 @@
-/* Dependencies */
+/* Gulp Dependencies */
 var gulp = require('gulp'),
 	uglify = require('gulp-uglify'),
 	concat = require('gulp-concat'),
@@ -30,7 +30,6 @@ gulp.task('html',function(){
 //Watch task
 gulp.task('watch',function(){
 	livereload.listen();
-
 	gulp.watch('js/source/*.js',['scripts']);
 	gulp.watch('css/source/*.css',['css']);
 	gulp.watch('*.html',['html']);

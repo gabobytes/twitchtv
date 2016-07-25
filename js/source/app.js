@@ -1,14 +1,14 @@
 var app = angular.module('tvApp',[]);
 app.controller('tvCtrl', function($scope,$http){
   
-  //values to show or hide online or offline users
+  /*Values to show or hide online or offline users*/
   $scope.onlineUsers = true;
   $scope.offlineUsers = true;
   
   var urlApi = "https://api.twitch.tv/kraken/streams/";
 
-  //array of users
-  var users = ["freecodecamp", "storbeck", "terakilobyte", "habathcx","RobotCaleb","comster404","OgamingSC2","thomasballinger","cretetion", "noobs2ninjas","beohoff", "sheevergaming","brunofin","ESL_SC2"];
+  //array of some TwitchTv users
+  var users = ["freecodecamp", "storbeck", "terakilobyte", "habathcx","RobotCaleb","comster404","OgamingSC2","thomasballinger","cretetion", "noobs2ninjas","beohoff", "sheevergaming","brunofin","ESL_SC2","pokemongo","sonyk0rzlol"];
   
   //arrays to store online and offline users
   $scope.online = [];

@@ -1,6 +1,6 @@
 {
   "name": "twitchtv",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "frontend showing api data from twitcth",
   "main": "gulpfile.js",
   "scripts": {

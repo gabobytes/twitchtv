@@ -3,12 +3,13 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify'),
 	concat = require('gulp-concat'),
 	livereload = require('gulp-livereload'),
-	uglifycss = require('gulp-uglifycss');
+	uglifycss = require('gulp-uglifycss'),
+	gutil = require('gulp-util');
 
 //Script tasks
 gulp.task('scripts',function(){
 	gulp.src('js/source/*.js')
-		.pipe(uglify({mangle: false}))
+		.pipe(uglify({mangle: false}).on('error',gutil.log))
 		.pipe(concat('app.js'))
 		.pipe(gulp.dest('js/build/'))
 		.pipe(livereload());

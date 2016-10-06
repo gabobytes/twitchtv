@@ -10,22 +10,29 @@ app.controller('tvCtrl', function($scope,$http){
   //array of some TwitchTv users
   var users = ["freecodecamp", "storbeck", "terakilobyte", "habathcx","RobotCaleb","comster404","OgamingSC2","thomasballinger","cretetion", "noobs2ninjas","beohoff", "sheevergaming","brunofin","ESL_SC2","pokemongo","sonyk0rzlol"];
   
+  //Headers and CLIENT-ID from twitchTV
+  var config = {
+    headers:{
+      'Client-ID': '6grsfoul5e1to3apxihx6ufoviw6awd'
+    }
+  };
+
   //arrays to store online and offline users
   $scope.online = [];
   $scope.offline = [];
   
   //this is just for practicing angular xD
-  $scope.titleApp = "Twitch.Tv Streamers";
+  $scope.titleApp = "Twitch.Tv Api Streamers";
   
   //query every user status with urlApi
   angular.forEach(users,function(user){    
-    $http.get(urlApi + user).success(function(data){
+    $http.get(urlApi + user,config).success(function(data){
     
       if(data.stream){//if user is online
           $scope.online.push(data); 
         }else{// else, user offline and check again API to get data of user offline          
           var urlOFF = data._links.channel;
-          $http.get(urlOFF).success(function(dataOFF){
+          $http.get(urlOFF,config).success(function(dataOFF){
           $scope.offline.push(dataOFF);  
           });//getURLOFF
         }      
